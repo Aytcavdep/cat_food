@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Exo2.0';
+  src: local('Exo2.0'), url(../assets/fonts/Exo2.0-Thin.otf) format('opentype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Exo2.0', system-ui, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-image: url(../assets/img/Pattern@2x.png);
+  #root {
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 5e-5) 49.88%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+}

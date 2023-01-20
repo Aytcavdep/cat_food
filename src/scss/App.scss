@@ -1,0 +1,8 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  align-items: center;
+  column-gap: 80px;
+  height: 100vh;
+}

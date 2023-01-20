@@ -1,0 +1,135 @@
+@mixin beveled-corners($bg, $tl: 0, $tr: $tl, $br: $tl, $bl: $tr) {
+  background: $bg;
+  background: linear-gradient(135deg, transparent $tl, $bg 0) top left,
+    linear-gradient(225deg, transparent $tr, $bg 0) top right,
+    linear-gradient(-45deg, transparent $br, $bg 0) bottom right,
+    linear-gradient(45deg, transparent $bl, $bg 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.card_layout {
+  display: grid;
+  width: 320px;
+  height: 509px;
+
+  .card_border {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    border-radius: 12px;
+    background: #2ea8e6;
+    @include beveled-corners(#2ea8e6, 28px, 0, 0);
+
+    .card {
+      height: 472px;
+      width: 312px;
+      border-radius: 12px;
+      @include beveled-corners(#ffffff, 28px, 0, 0);
+      position: relative;
+    }
+
+    /*  &:after {
+      position: relative;
+      top: 0;
+      content: ' ';
+      display: block;
+      background: red;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+    } */
+    /* .card_title:before {
+      content: ' ';
+      display: block;
+      background: red;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+    } */
+  }
+}
+
+.card_title {
+  margin-top: 17px;
+  margin-left: 47px;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+}
+
+.card_brand_name {
+  margin-top: 5px;
+  margin-left: 44px;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+}
+
+.card_taste {
+  margin-top: -1px;
+  margin-left: 47px;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.card_offer {
+  height: 48px;
+  margin-top: 15px;
+  margin-left: 47px;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  span {
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+  }
+}
+
+.card_label {
+  img {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 0 12px;
+  }
+
+  .card_weight {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    right: 12px;
+    bottom: 12px;
+    border-radius: 50%;
+    background: #1698d9;
+
+    span {
+      flex-basis: 100%;
+      font-size: 42px;
+    }
+  }
+}
