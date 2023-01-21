@@ -12,6 +12,9 @@
   display: grid;
   width: 320px;
   height: 509px;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
 
   .card_border {
     display: grid;
@@ -26,37 +29,15 @@
       height: 472px;
       width: 312px;
       border-radius: 12px;
-      @include beveled-corners(#ffffff, 28px, 0, 0);
+      @include beveled-corners(#f2f2f2, 28px, 0, 0);
       position: relative;
     }
-
-    /*  &:after {
-      position: relative;
-      top: 0;
-      content: ' ';
-      display: block;
-      background: red;
-      height: 100%;
-      width: 100%;
-      border-radius: 12px;
-    } */
-    /* .card_title:before {
-      content: ' ';
-      display: block;
-      background: red;
-      height: 100%;
-      width: 100%;
-      border-radius: 12px;
-    } */
   }
 }
 
 .card_title {
   margin-top: 17px;
   margin-left: 47px;
-  font-family: 'Trebuchet MS';
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #666666;
@@ -65,8 +46,6 @@
 .card_brand_name {
   margin-top: 5px;
   margin-left: 44px;
-  font-family: 'Trebuchet MS';
-  font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 56px;
@@ -76,8 +55,6 @@
 .card_taste {
   margin-top: -1px;
   margin-left: 47px;
-  font-family: 'Trebuchet MS';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -86,16 +63,13 @@
 
 .card_offer {
   height: 48px;
+  width: 127px;
   margin-top: 15px;
   margin-left: 47px;
-  font-family: 'Trebuchet MS';
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #666666;
   span {
-    font-family: 'Trebuchet MS';
     font-weight: bold;
   }
 }
@@ -111,25 +85,38 @@
     width: 80px;
     height: 80px;
     position: absolute;
-    font-family: 'Trebuchet MS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 22px;
-    display: flex;
-    flex-wrap: wrap;
+
+    display: grid;
+    justify-items: center;
     align-items: center;
-    text-align: center;
-    justify-content: center;
+    align-content: center;
     color: #ffffff;
     right: 12px;
     bottom: 12px;
     border-radius: 50%;
     background: #1698d9;
 
-    span {
-      flex-basis: 100%;
+    .weight {
       font-size: 42px;
     }
+    .unit {
+      margin-top: -5px;
+      font-size: 21px;
+      line-height: 22px;
+    }
+  }
+}
+
+.card_footer {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+
+  span {
+    font-weight: 700;
+    color: #22a7e9;
+    text-decoration: underline dashed;
   }
 }
